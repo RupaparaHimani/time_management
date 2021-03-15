@@ -1,0 +1,7 @@
+<% @work_logs.each do |wf| %>
+  <%= wf.user.name %>
+  <%= wf.notes %>
+  <%= wf.work_date %>
+  <%= wf.hours.to_f %> </br>
+<% end %>
+<%= link_to 'create', new_work_log_path %>

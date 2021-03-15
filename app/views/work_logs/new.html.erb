@@ -1,0 +1,7 @@
+<%= form_for @work_log, as: :work_log, url: work_logs_url(@work_log), method: :post do |f| %>
+  Users:  <%= f.select(:user_id, options_from_collection_for_select(@users, "id", "name")) %> <br/>
+  Note name: <%= f.text_field :notes %><br />
+  hours : <%= f.number_field :hours, step: 0.5 %><br />
+  date : <%= f.date_field :work_date %><br />
+  <%= f.submit 'Save'%>
+<% end %>
